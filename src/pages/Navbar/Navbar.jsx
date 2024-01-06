@@ -11,16 +11,15 @@ const Navbar = () => {
     const handleDropdownToggle = () => {
         setDropdownOpen(!isDropdownOpen);
     };
-
     const [scrolling, setScrolling] = useState(false);
 
     useEffect(() => {
         const handleScroll = () => {
-            const isTop = window.scrollY < 100;
+            const isTop = window.scrollY < 100; 
             if (isTop) {
-                setScrolling(false);
+                setScrolling(false); 
             } else {
-                setScrolling(true);
+                setScrolling(true); 
             }
         };
 
@@ -32,13 +31,13 @@ const Navbar = () => {
 
 
     return (
-        <div className={`${scrolling ? 'bg-[#c0ffc1]' : ''}`} style={{ position: 'fixed', top: 0, width: '100%', zIndex: 700 }}>
-            <div className="max-w-screen-xl mx-auto py-2">
+        <div className={`${scrolling ? 'bg-[#B6E388]' : 'bg-[#e1ffb18b]'}`} style={{ position: 'fixed', top: 0, width: '100%', zIndex: 700 }}>
+            <div className="max-w-screen-xl mx-auto  py-3 rounded-b-2xl">
                 <div className="flex flex-row items-center md:px-5 justify-between">
 
                     <Link to='/'>
                         {/* <img className="w-[160px] h-[65px]" src={logo} alt="" /> */}
-                        <h2 className="text-xl font-bold">VBD Lakshmipur</h2>
+                        <h2 className="text-2xl text-yellow-500 font-bold">VBD Lakshmipur</h2>
 
                     </Link>
                     <div className="lg:hidden flex">
@@ -98,27 +97,27 @@ const Navbar = () => {
                         <ul className=" menu-horizontal gap-2 mr-5">
                             <li>
                                 <a >
-                                    <NavLink className="text-center px-2 py-[5px] bg-gray-100 rounded-md" to="/">Home</NavLink>
+                                    <NavLink className="text-center px-2 py-[5px] bg-yellow-300 text-green-900 font-semibold rounded-md" to="/">Home</NavLink>
                                 </a >
                             </li>
                             <li>
                                 <a>
-                                    <NavLink className="text-center px-2 py-[5px] bg-gray-100 rounded-md" to="/about">About</NavLink>
+                                    <NavLink className="text-center px-2 py-[5px] bg-yellow-300 text-green-900 font-semibold rounded-md" to="/about">About</NavLink>
                                 </a>
                             </li>
                             <li>
                                 <a>
-                                    <NavLink className="text-center px-2 py-[5px] bg-gray-100 rounded-md" to="/projects">Projects</NavLink>
+                                    <NavLink className="text-center px-2 py-[5px] bg-yellow-300 text-green-900 font-semibold rounded-md" to="/projects">Projects</NavLink>
                                 </a>
                             </li>
                             <li>
                                 <a>
-                                    <NavLink className="text-center px-2 py-[5px] bg-gray-100 rounded-md" to="/team">Team</NavLink>
+                                    <NavLink className="text-center px-2 py-[5px] bg-yellow-300 text-green-900 font-semibold rounded-md" to="/team">Team</NavLink>
                                 </a>
                             </li>
                             <li>
                                 <a>
-                                    <NavLink className="text-center px-2 py-[5px] bg-gray-100 rounded-md" to="/contract">Contract</NavLink>
+                                    <NavLink className="text-center px-2 py-[5px] bg-yellow-300 text-green-900 font-semibold rounded-md" to="/contract">Contract</NavLink>
                                 </a>
                             </li>
 
@@ -138,7 +137,6 @@ const Navbar = () => {
                     </div>
                 </div>
             </div>
-
         </div>
     );
 };
