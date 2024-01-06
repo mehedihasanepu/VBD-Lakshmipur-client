@@ -2,9 +2,10 @@
 
 const Home = () => {
     return (
-        <div>
-           
-            <h1>hiii</h1>
+        <div className="max-w-screen-xl mx-auto">
+            <div className="mt-10">
+
+            </div>
         </div>
     );
 };

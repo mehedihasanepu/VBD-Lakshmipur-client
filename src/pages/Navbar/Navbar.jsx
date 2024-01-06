@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import "./navbar.css"
 import UserProfile from "../../component/UserProfile/UserProfile";
@@ -12,14 +12,30 @@ const Navbar = () => {
         setDropdownOpen(!isDropdownOpen);
     };
 
+    const [scrolling, setScrolling] = useState(false);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const isTop = window.scrollY < 100;
+            if (isTop) {
+                setScrolling(false);
+            } else {
+                setScrolling(true);
+            }
+        };
+
+        window.addEventListener("scroll", handleScroll);
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, []);
+
 
 
 
     return (
-        <div >
-            <div className="max-w-screen-xl mx-auto mb-5 py-3 bg-blue-50 rounded-b-2xl">
+        <div className={`${scrolling ? 'bg-[#c0ffc1]' : ''}`} style={{ position: 'fixed', top: 0, width: '100%', zIndex: 700 }}>
+            <div className="max-w-screen-xl mx-auto py-2">
                 <div className="flex flex-row items-center md:px-5 justify-between">
-                   
+
                     <Link to='/'>
                         {/* <img className="w-[160px] h-[65px]" src={logo} alt="" /> */}
                         <h2 className="text-xl font-bold">VBD Lakshmipur</h2>
@@ -63,9 +79,9 @@ const Navbar = () => {
                                             <NavLink to="/contract">Contract</NavLink>
                                         </a>
                                     </li>
-                                   
 
-                                    
+
+
 
                                     {
                                         user ? null :
@@ -87,11 +103,26 @@ const Navbar = () => {
                             </li>
                             <li>
                                 <a>
-                                    <NavLink className="text-center px-2 py-[5px] bg-gray-100 rounded-md" to="/membership">Membership</NavLink>
+                                    <NavLink className="text-center px-2 py-[5px] bg-gray-100 rounded-md" to="/about">About</NavLink>
                                 </a>
                             </li>
-                  
-                           
+                            <li>
+                                <a>
+                                    <NavLink className="text-center px-2 py-[5px] bg-gray-100 rounded-md" to="/projects">Projects</NavLink>
+                                </a>
+                            </li>
+                            <li>
+                                <a>
+                                    <NavLink className="text-center px-2 py-[5px] bg-gray-100 rounded-md" to="/team">Team</NavLink>
+                                </a>
+                            </li>
+                            <li>
+                                <a>
+                                    <NavLink className="text-center px-2 py-[5px] bg-gray-100 rounded-md" to="/contract">Contract</NavLink>
+                                </a>
+                            </li>
+
+
                         </ul>
                         <UserProfile></UserProfile>
                         {
