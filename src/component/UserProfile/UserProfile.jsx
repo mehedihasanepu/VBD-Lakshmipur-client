@@ -1,22 +1,21 @@
 import { NavLink } from "react-router-dom";
-// import { IoNotifications } from "react-icons/io5";
-import { useState } from "react";
+import useAuth from "../../hook/useAuth";
+import toast from "react-hot-toast";
 const UserProfile = () => {
 
-    // const { user, logOut } = useAuth()
-    // const { announcements } = useAnnouncement()
+    const { user, logOut } = useAuth()
 
     const handleSingOut = () => {
-        // logOut()
-        //     .then(result => {
-        //         console.log(result.user);
-        //     })
-        //     .catch(error => {
-        //         console.error(error);
-        //         toast.success('Sing Out SuccessFull')
-        //     })
+        logOut()
+            .then(result => {
+                console.log(result.user);
+            })
+            .catch(error => {
+                console.error(error);
+                toast.success('Sing Out SuccessFull')
+            })
     }
-    const [user, setUser] = useState(true)
+
 
 
 
@@ -26,16 +25,6 @@ const UserProfile = () => {
             {
                 user &&
                 <div className="flex items-center gap-2">
-{/* 
-                    <div>
-                        <a href="#announcement">
-                            <div className="indicator py-2">
-                                <span className="indicator-item indicator-top indicator-start badge badge-info">{announcements.length}</span>
-                                <p><IoNotifications className="text-xl"></IoNotifications></p>
-                            </div>
-                        </a>
-                    </div> */}
-
                     <div className="dropdown dropdown-end pr-2">
                         <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
                             <div className="w-12 rounded-full">

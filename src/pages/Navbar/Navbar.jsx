@@ -2,15 +2,16 @@ import { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import "./navbar.css"
 import UserProfile from "../../component/UserProfile/UserProfile";
+import useAuth from "../../hook/useAuth";
 const Navbar = () => {
 
-    // const { user } = useAuth()
+    const { user } = useAuth()
     const [isDropdownOpen, setDropdownOpen] = useState(false);
 
     const handleDropdownToggle = () => {
         setDropdownOpen(!isDropdownOpen);
     };
-    const [user, setUser] = useState(true)
+
 
 
 
