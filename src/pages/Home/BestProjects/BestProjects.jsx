@@ -28,8 +28,8 @@ const BestProjects = () => {
     ];
 
     return (
-        <div>
-            <h2 className="lg:text-5xl text-3xl text-[#134d22] font-bold mb-5 text-center">
+        <div className="mt-16">
+            <h2 className="lg:text-5xl text-3xl text-[#134d22] font-bold mb-10 text-center">
                 Our Best Projects
             </h2>
             <div className="max-w-screen-lg mx-auto px-3">
@@ -42,7 +42,7 @@ const BestProjects = () => {
                             grabCursor={true}
                             modules={[EffectCards, Autoplay]}
                             autoplay={{
-                                delay: 3000,
+                                delay: 2500,
                                 disableOnInteraction: false,
                             }}
                             className="mySwiper"
