@@ -37,7 +37,7 @@ const Navbar = () => {
 
                     <Link to='/'>
                         {/* <img className="w-[160px] h-[65px]" src={logo} alt="" /> */}
-                        <h2 className="text-2xl text-yellow-500 font-bold">VBD Lakshmipur</h2>
+                        <h2 className="text-2xl text-[#064c00] font-bold">VBD Lakshmipur</h2>
 
                     </Link>
                     <div className="lg:hidden flex">

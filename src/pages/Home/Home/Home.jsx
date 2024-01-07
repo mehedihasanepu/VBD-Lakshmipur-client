@@ -1,16 +1,16 @@
 import Banner from "../Banner/Banner";
+import BestProjects from "../BestProjects/BestProjects";
+import WhoWeAre from "../WhoWeAre/WhoWeAre";
 
 
 const Home = () => {
     return (
-        <div className="w-screen mx-auto">
+        <div >
             <div className="">
                 <Banner></Banner>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Provident hic veritatis sequi architecto doloribus adipisci molestias dolore debitis quasi? Vel ab inventore odit? Delectus enim libero architecto incidunt provident a!</p>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Provident hic veritatis sequi architecto doloribus adipisci molestias dolore debitis quasi? Vel ab inventore odit? Delectus enim libero architecto incidunt provident a!</p>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Provident hic veritatis sequi architecto doloribus adipisci molestias dolore debitis quasi? Vel ab inventore odit? Delectus enim libero architecto incidunt provident a!</p>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Provident hic veritatis sequi architecto doloribus adipisci molestias dolore debitis quasi? Vel ab inventore odit? Delectus enim libero architecto incidunt provident a!</p>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Provident hic veritatis sequi architecto doloribus adipisci molestias dolore debitis quasi? Vel ab inventore odit? Delectus enim libero architecto incidunt provident a!</p>
+                <WhoWeAre></WhoWeAre> 
+                <BestProjects></BestProjects>
+                
             </div>
         </div>
     );

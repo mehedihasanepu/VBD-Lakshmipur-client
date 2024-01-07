@@ -10,6 +10,9 @@ import {
 } from '@tanstack/react-query'
 import AuthProviders from './providers/AuthProviders';
 import { router } from './route/Routes';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 
 const queryClient = new QueryClient()
 
@@ -23,4 +26,12 @@ ReactDOM.createRoot(document.getElementById('root')).render(
       </AuthProviders>
     </QueryClientProvider>
   </React.StrictMode>,
+
+
+AOS.init({
+  offset: 200,
+  duration: 500,
+  easing: 'ease-in-sine',
+  delay: 100,
+})
 )

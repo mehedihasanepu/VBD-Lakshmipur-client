@@ -10,6 +10,7 @@ import bannerImg6 from "../../../assets/image/banner-img6.jpg";
 import bannerImg7 from "../../../assets/image/banner-img7.jpg";
 
 import { Autoplay, Navigation } from "swiper/modules";
+import "swiper/css/effect-coverflow";
 
 function VolunteerForBangladeshBanner() {
     const settings = {
@@ -82,16 +83,16 @@ function VolunteerForBangladeshBanner() {
                             />
                             <div className="hero h-full absolute top-0 left-0 bg-black bg-opacity-50 text-white">
                                 <div className="hero-continent text-center">
-                                    <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold">
+                                    <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold" data-aos="fade-right">
                                         {slideContents[index].h2}
                                     </h2>
-                                    <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mt-3">
+                                    <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mt-3" data-aos="fade-left">
                                         {slideContents[index].h1}
                                     </h1>
-                                    <p className="tracking-widest mt-3 max-w-screen-lg">
+                                    <p className="tracking-widest mt-3 max-w-screen-lg" data-aos="fade-left">
                                         {slideContents[index].p}
                                     </p>
-                                </div>
+                                </div>  
                             </div>
                         </div>
                     </SwiperSlide>
