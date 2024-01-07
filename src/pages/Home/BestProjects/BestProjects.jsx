@@ -32,10 +32,10 @@ const BestProjects = () => {
             <h2 className="lg:text-5xl text-3xl text-[#134d22] font-bold mb-10 text-center">
                 Our Best Projects
             </h2>
-            <div className="max-w-screen-lg mx-auto px-3">
+            <div className="max-w-screen-lg mx-auto px-3 ">
                 <div className="grid grid-cols-5 gap-28">
 
-                    <div className="col-span-3">
+                    <div className="col-span-3 " data-aos="fade-right">
 
                         <Swiper
                             effect={'cards'}
@@ -66,7 +66,7 @@ const BestProjects = () => {
                             ))}
                         </Swiper>
                     </div>
-                    <div className="col-span-2">
+                    <div className="col-span-2 " data-aos="fade-left">
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi doloribus autem dignissimos? Sequi repudiandae, distinctio quam dignissimos non minima aliquam earum qui ipsum nisi! Accusantium aut veniam saepe adipisci nobis.</p>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi doloribus autem dignissimos? Sequi repudiandae, distinctio quam dignissimos non minima aliquam earum qui ipsum nisi! Accusantium aut veniam saepe adipisci nobis.</p>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi doloribus autem dignissimos? Sequi repudiandae, distinctio quam dignissimos non minima aliquam earum qui ipsum nisi! Accusantium aut veniam saepe adipisci nobis.</p>

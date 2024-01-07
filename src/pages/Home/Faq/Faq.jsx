@@ -29,7 +29,7 @@ const Faq = () => {
             <h2 className="lg:text-5xl text-3xl text-[#134d22] font-bold mb-10 text-center">
                 FAQ
             </h2>
-           <div className="space-y-2">
+            <div className="space-y-2" data-aos="zoom-in-up">
                 {
                     faq.map((f, inx) => <div key={inx} className="collapse collapse-arrow bg-[#FCFFB2]">
                         <input type="radio" name={`my-accordion-{inx}`} />
