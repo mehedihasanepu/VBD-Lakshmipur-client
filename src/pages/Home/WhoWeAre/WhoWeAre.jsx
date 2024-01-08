@@ -16,13 +16,13 @@ const WhoWeAre = () => {
         <div>
             <div
                 className=" overflow-x-hidden container mx-auto my-12 bg-[#134d22]  rounded-3xl shadow-2xl"
-                data-aos="fade-up"
+               
             >
-                <div className="flex justify-center items-center p-10 gap-6">
-                    <div data-aos="fade-right" className="flex-1">
+                <div className="flex flex-col lg:flex-row justify-center items-center p-5 lg:p-10 gap-6">
+                    <div data-aos="zoom-in-up" className="flex-1">
                         <img src={aboutImg} alt="about_img" className="rounded-2xl h-[450px] mx-auto" />
                     </div>
-                    <div data-aos="fade-left" className="flex-1">
+                    <div data-aos="zoom-in-up" className="flex-1">
                         <h2 className="lg:text-5xl text-3xl text-[#fbc807] font-bold mb-5">
                             Who we are?
                         </h2>

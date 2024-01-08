@@ -77,7 +77,7 @@ function VolunteerForBangladeshBanner() {
                     <SwiperSlide key={index}>
                         <div>
                             <img
-                                className="h-96 md:h-screen w-screen object-cover"
+                                className="h-[500px] md:h-screen w-screen object-cover"
                                 src={image}
                                 alt={`Banner ${index + 1}`}
                             />
